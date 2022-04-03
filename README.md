@@ -12,6 +12,8 @@ Here are the technologies used in this project.
 * Javascript
 * CSS
 * HTML
+* Api - Scroll Reveal - Registers the target element(s) with ScrollReveal, generates animation styles, and attaches event listeners to manage when styles are applied.
+* Swiper - Swiper is the most modern free mobile touch slider with hardware accelerated transitions and amazing native behavior. It is intended to be used in mobile websites, mobile web apps, and mobile native/hybrid apps.
 
 ## Services Used
 
@@ -32,20 +34,30 @@ Here are the technologies used in this project.
 
 ![Services](https://github.com/MagalhaesDev/oldschool.-Leading-page/blob/main/public/Readme/servico-mobile.png)
 
-### 4 - ## CONSTRUCT
+### 4 - This section shows the testimonials from users using the swiper library.
 
 ![Testimonials](https://github.com/MagalhaesDev/oldschool.-Leading-page/blob/main/public/Readme/depoimento-mobile.png)
+
+### 4 - This section contains the representatives' contacts. Such as whatsapp, telephone, location and address.
+
+![Contact](https://github.com/MagalhaesDev/oldschool.-Leading-page/blob/main/public/Readme/contato-mobile.png)
+
+### 4 - At the bottom of the site we have a social networking section.
+
+![Footer](https://github.com/MagalhaesDev/oldschool.-Leading-page/blob/main/public/Readme/footer-mobile.png)
 
 ## Features
 
 The main features of the application are:
- - Calculate your BMI
- - Change theme
+ - Leading page
+ - UX and UI
+ - Swiper
+ - Scroll Reveal
  - Mobile-First
 
 
 ## Links
-  - Repository: https://github.com/MagalhaesDev/Calculator-IMC
+  - Repository: https://magalhaesdev.github.io/oldschool.-Leading-page/
     -  In case of sensitive bugs like security vulnerabilities, please contact
       mateusmagalhaesemidio@gmail.com directly instead of using issue tracker. We value your effort
       to improve the security and privacy of this project!
