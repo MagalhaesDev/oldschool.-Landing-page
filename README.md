@@ -64,8 +64,7 @@ The main features of the application are:
 
   ## Versioning
 
-  1.0.0.0
-
+  1.0.0
 
   ## Authors
 
