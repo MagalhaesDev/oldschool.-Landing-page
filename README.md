@@ -58,8 +58,8 @@ The main features of the application are:
 
 ## Links
   - Repository: https://magalhaesdev.github.io/oldschool.-Leading-page/
-    -  In case of sensitive bugs like security vulnerabilities, please contact
-      mateusmagalhaesemidio@gmail.com directly instead of using issue tracker. We value your effort
+    -  In case of sensitive bugs like security vulnerabilities, please contact.
+      mateusmagalhaesemidio@gmail.com directly instead of using issue tracker. We value your effort.
       to improve the security and privacy of this project!
 
   ## Versioning
