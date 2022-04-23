@@ -3,7 +3,7 @@
 
 
 ## Leading Page GYM.
-A leading page that has the intuition of presenting a static page with a good UX and UI, using the good practices of mobile first, consists of a gym page, with the sections start, about, services, testimonials and contacts.
+A leading page that has the intuition of presenting a static page with a good UX and UI, using the good practices of mobile first, consists of a gym page, with the sections start, about, services, testimonials and contacts
 
 ## Technology 
 
