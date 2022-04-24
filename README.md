@@ -1,5 +1,5 @@
 
-![Logo of the project](https://cdn-icons-png.flaticon.com/512/1468/1468326.png)
+![Logo of the project](https://cdn-icons-png.flaticon.com/512/1468/1468326.png).
 
 
 ## Leading Page GYM.
