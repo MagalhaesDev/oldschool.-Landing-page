@@ -1,35 +1,3 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@MagalhaesDev 
-rocketseat-education
-/
-nlw-06-origin
-Public
-Code
-Issues
-1
-Pull requests
-1
-Actions
-Projects
-Wiki
-Security
-Insights
-nlw-06-origin/style.css
-@maykbrito
-maykbrito fix: The SwipperJS was updated, then, this one adjusts scrolling and …
-…
-Latest commit 28fc15a on 10 Nov 2021
- History
- 1 contributor
-662 lines (539 sloc)  9.82 KB
-
-
 /*====  RESET ============================ */
 * {
   margin: 0;
