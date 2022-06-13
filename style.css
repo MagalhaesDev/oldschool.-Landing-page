@@ -1,20 +1,48 @@
-/* ============ FONTS =========== */
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@MagalhaesDev 
+rocketseat-education
+/
+nlw-06-origin
+Public
+Code
+Issues
+1
+Pull requests
+1
+Actions
+Projects
+Wiki
+Security
+Insights
+nlw-06-origin/style.css
+@maykbrito
+maykbrito fix: The SwipperJS was updated, then, this one adjusts scrolling and …
+…
+Latest commit 28fc15a on 10 Nov 2021
+ History
+ 1 contributor
+662 lines (539 sloc)  9.82 KB
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap');
 
-/* ============ RESET =========== */
+/*====  RESET ============================ */
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
-}
-
-a {
-  text-decoration: none;
 }
 
 ul {
   list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 img {
@@ -22,41 +50,43 @@ img {
   height: auto;
 }
 
-/* ============ VARIAVEIS =========== */
-
+/*====  VARIABLES ============================ */
 :root {
   --header-height: 4.5rem;
+
   /* colors */
-  --hue: 37;
+  --hue: 159;
   /* HSL color mode */
-  --base-color: hsl(var(--hue), 100%, 64%);
+  --base-color: hsl(var(--hue) 36% 57%);
   --base-color-second: hsl(var(--hue) 65% 88%);
-  --base-color-alt: hsl(var(--hue), 100%, 48%);
+  --base-color-alt: hsl(var(--hue) 57% 53%);
   --title-color: hsl(var(--hue) 41% 10%);
   --text-color: hsl(0 0% 46%);
   --text-color-light: hsl(0 0% 98%);
   --body-color: hsl(0 0% 98%);
 
   /* fonts */
-
   --title-font-size: 1.875rem;
+  --subtitle-font-size: 1rem;
+
+  --title-font: 'Poppins', sans-serif;
+  --body-font: 'DM Sans', sans-serif;
 }
 
-/* ============ BASE =========== */
-
+/*===  BASE ============================ */
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font: 400 1rem 'DM Sans', sans-serif;
+  font: 400 1rem var(--body-font);
   color: var(--text-color);
   background: var(--body-color);
   -webkit-font-smoothing: antialiased;
 }
 
 .title {
-  font: 700 var(--title-font-size) 'Poppins', sans-serif;
+  font: 700 var(--title-font-size) var(--title-font);
   color: var(--title-color);
   -webkit-font-smoothing: auto;
 }
@@ -69,13 +99,12 @@ body {
   align-items: center;
   padding: 0 2rem;
   border-radius: 0.25rem;
-  font: 500 1rem 'DM Sans', sans-serif;
+  font: 500 1rem var(--body-font);
   transition: background 0.3s;
 }
 
 .button:hover {
-  cursor: pointer;
-  background-color: var(--base-color-alt);
+  background: var(--base-color-alt);
 }
 
 .divider-1 {
@@ -83,7 +112,7 @@ body {
   background: linear-gradient(
     270deg,
     hsla(var(--hue), 36%, 57%, 1),
-    hsla(159, 65%, 88%, 0.34)
+    hsla(var(--hue), 65%, 88%, 0.34)
   );
 }
 
@@ -91,13 +120,12 @@ body {
   height: 1px;
   background: linear-gradient(
     270deg,
-    hsla(159, 65%, 88%, 0.34),
+    hsla(var(--hue), 65%, 88%, 0.34),
     hsla(var(--hue), 36%, 57%, 1)
   );
 }
 
-/* ============ LAYOUT =========== */
-
+/*====  LAYOUT ============================ */
 .container {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
@@ -109,11 +137,15 @@ body {
 }
 
 .section {
-  padding: 5rem 0;
+  padding: calc(5rem + var(--header-height)) 0;
 }
 
 .section .title {
   margin-bottom: 1rem;
+}
+
+.section .subtitle {
+  font-size: var(--subtitle-font-size);
 }
 
 .section header {
@@ -128,26 +160,26 @@ body {
   border-bottom: 1px solid #e4e4e4;
   margin-bottom: 2rem;
   display: flex;
+
+  position: fixed;
   top: 0;
   left: 0;
-  position: fixed;
   z-index: 100;
   background-color: var(--body-color);
   width: 100%;
 }
 
-main {
-  margin-top: calc(4.5rem + 2rem);
+#header.scroll {
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* ============ LOGO =========== */
-
+/*====  LOGO ============================ */
 .logo {
+  font: 700 1.31rem var(--title-font);
   color: var(--title-color);
-  font: 700 1.31rem 'Poppins', sans-serif;
 }
 
-.logo > span {
+.logo span {
   color: var(--base-color);
 }
 
@@ -155,14 +187,13 @@ main {
   color: var(--body-color);
 }
 
-/* ============ NAVIGATION =========== */
-
+/*====  NAVIGATION ============================ */
 nav {
-  width: 100%;
-  height: 4.5rem;
+  height: var(--header-height);
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
 nav ul li {
@@ -170,26 +201,30 @@ nav ul li {
 }
 
 nav ul li a {
-  transition: color 0.3s;
+  transition: color 0.2s;
   position: relative;
 }
 
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li a.active {
   color: var(--base-color);
 }
 
 nav ul li a::after {
-  transition: width 0.3s;
   content: '';
-  background-color: var(--base-color);
   width: 0%;
   height: 2px;
+  background: var(--base-color);
+
   position: absolute;
   left: 0;
   bottom: -1.5rem;
+
+  transition: width 0.2s;
 }
 
-nav ul li a:hover::after {
+nav ul li a:hover::after,
+nav ul li a.active::after {
   width: 100%;
 }
 
@@ -197,24 +232,27 @@ nav .menu {
   opacity: 0;
   visibility: hidden;
   top: -20rem;
-  transition: 0.2rem;
+  transition: 0.2s;
 }
 
 nav .menu ul {
   display: none;
 }
 
-/* ------ Mostrar o menu ------- */
-
+/* Mostrar menu */
 nav.show .menu {
   opacity: 1;
   visibility: visible;
+
   background: var(--body-color);
+
   height: 100vh;
   width: 100vw;
+
   position: fixed;
   top: 0;
   left: 0;
+
   display: grid;
   place-content: center;
 }
@@ -227,8 +265,7 @@ nav.show ul.grid {
   gap: 4rem;
 }
 
-/*  ========== TOGGLE MENU ======== */
-
+/* toggle menu */
 .toggle {
   color: var(--base-color);
   font-size: 1.5rem;
@@ -242,6 +279,7 @@ nav .icon-close {
   position: absolute;
   top: -1.5rem;
   right: 1.5rem;
+
   transition: 0.2s;
 }
 
@@ -251,7 +289,7 @@ nav.show div.icon-close {
   top: 1.5rem;
 }
 
-/* ============ HOME =========== */
+/*====  HOME ============================ */
 #home {
   overflow: hidden;
 }
@@ -266,13 +304,13 @@ nav.show div.icon-close {
 
 #home .image::before {
   content: '';
-  width: 100%;
   height: 100%;
-  background-color: var(--base-color);
+  width: 100%;
+  background: var(--base-color-second);
   position: absolute;
   top: -16.8%;
-  left: 16.8%;
-  z-index: -999;
+  left: 16.7%;
+  z-index: 0;
 }
 
 #home .image img {
@@ -297,13 +335,11 @@ nav.show div.icon-close {
 
 #home .text p {
   margin-bottom: 2rem;
-  max-width: 100%;
 }
 
-/* =========== ABOUT ========== */
-
+/*====  ABOUT ============================ */
 #about {
-  background-color: white;
+  background: white;
 }
 
 #about .container {
@@ -316,13 +352,13 @@ nav.show div.icon-close {
 
 #about .image::before {
   content: '';
-  width: 100%;
   height: 100%;
-  background-color: var(--base-color);
+  width: 100%;
+  background: var(--base-color-second);
   position: absolute;
-  left: -33%;
   top: -8.3%;
-  z-index: -999;
+  left: -33%;
+  z-index: 0;
 }
 
 #about .image img {
@@ -339,8 +375,7 @@ nav.show div.icon-close {
   margin-right: 1.5rem;
 }
 
-/* =========== SERVICES ========== */
-
+/*====  SERVICES ============================ */
 .cards.grid {
   gap: 1.5rem;
 }
@@ -365,15 +400,16 @@ nav.show div.icon-close {
   margin-bottom: 0.75rem;
 }
 
-/* =========== TESTIMONIALS ========== */
-
+/*====  TESTIMONIALS ============================ */
 #testimonials {
-  background-color: white;
+  background: white;
 }
 
 #testimonials .container {
   margin-left: 0;
   margin-right: 0;
+  position: relative;
+  overflow: hidden;
 }
 
 #testimonials header {
@@ -417,8 +453,7 @@ nav.show div.icon-close {
   margin-right: 0.5rem;
 }
 
-/* =========== SWIPER ========== */
-
+/* swiper */
 .swiper-slide {
   height: auto;
   padding: 4rem 1rem;
@@ -430,11 +465,10 @@ nav.show div.icon-close {
 }
 
 .swiper-pagination-bullet-active {
-  background-color: var(--base-color);
+  background: var(--base-color);
 }
 
-/* =========== SWIPER ========== */
-
+/*====  CONTACT ============================ */
 #contact .grid {
   gap: 4rem;
 }
@@ -446,7 +480,7 @@ nav.show div.icon-close {
 #contact .button i,
 #contact ul li i {
   font-size: 1.5rem;
-  margin-right: 0.625em;
+  margin-right: 0.625rem;
 }
 
 #contact ul.grid {
@@ -462,10 +496,13 @@ nav.show div.icon-close {
   color: var(--base-color);
 }
 
-/* ============ FOOTER =========== */
-
+/*====  FOOTER ============================ */
 footer {
-  background-color: var(--base-color);
+  background: var(--base-color);
+}
+
+footer.section {
+  padding: 4rem 0;
 }
 
 footer .logo {
@@ -483,24 +520,174 @@ footer i {
   color: var(--text-color-light);
 }
 
+footer .social {
+  grid-auto-flow: column;
+  width: fit-content;
+}
+
 footer .social a {
-  margin-right: 2rem;
   transition: 0.3s;
   display: inline-block;
 }
 
 footer .social a:hover {
-  transform: translateY(-7px);
+  transform: translateY(-8px);
 }
 
-/* ============ MEDIA QUERIES =========== */
-/* extra large devices: 1200 >  */
+/* Back to top */
+.back-to-top {
+  background: var(--base-color);
+  color: var(--text-color-light);
+
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+
+  padding: 0.5rem;
+  clip-path: circle();
+
+  font-size: 1.5rem;
+  line-height: 0;
+
+  visibility: hidden;
+  opacity: 0;
+
+  transition: 0.3s;
+  transform: translateY(100%);
+}
+
+.back-to-top.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*========= MEDIA QUERIES =========*/
+/* extra large devices: 1200 > */
+@media (min-width: 1200px) {
+  /* reusable classes */
+  .container {
+    max-width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section {
+    padding: 10rem 0;
+  }
+
+  .section header,
+  #testimonials header {
+    max-width: 32rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .button {
+    height: 3.125rem;
+  }
+
+  /* navigation */
+  nav .menu {
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+  }
+
+  nav .menu ul {
+    display: flex;
+    gap: 2rem;
+  }
+
+  nav .menu ul li a.title {
+    font: 400 1rem var(--body-font);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  nav .menu ul li a.title.active {
+    font-weight: bold;
+    -webkit-font-smoothing: auto;
+  }
+
+  nav .icon-menu {
+    display: none;
+  }
+
+  /* layout */
+  main {
+    margin-top: var(--header-height);
+  }
+
+  /* home */
+  #home .container {
+    grid-auto-flow: column;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+
+  #home .image {
+    order: 1;
+  }
+
+  #home .text {
+    order: 0;
+    max-width: 24rem;
+    text-align: left;
+  }
+
+  /* about */
+  #about .container {
+    margin: 0 auto;
+    grid-auto-flow: column;
+  }
+
+  /* services */
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .card {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  /* testimonials */
+  #testimonials .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* contact */
+  #contact .container {
+    grid-auto-flow: column;
+    align-items: center;
+  }
+
+  #contact .text {
+    max-width: 25rem;
+  }
+
+  /* footer */
+  footer.section {
+    padding: 3.75rem 0;
+  }
+
+  footer .container {
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  footer .logo {
+    font-size: 2.25rem;
+  }
+}
 /* large devices: 1023 > */
 /* large devices: 992 > */
-/* medium devices: 767 > */
-
 @media (min-width: 992px) {
   :root {
     --title-font-size: 2.25rem;
+    --subtitle-font-size: 1.125rem;
   }
 }
