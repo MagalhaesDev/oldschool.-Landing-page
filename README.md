@@ -2,8 +2,8 @@
 ![Logo of the project](https://cdn-icons-png.flaticon.com/512/1468/1468326.png)
 
 
-## Leading Page GYM.
-A leading page that has the intuition of presenting a static page with a good UX and UI, using the good practices of mobile first, consists of a gym page, with the sections start, about, services, testimonials and contacts
+## Landing Page GYM.
+A landing page that has the intuition of presenting a static page with a good UX and UI, using the good practices of mobile first, consists of a gym page, with the sections start, about, services, testimonials and contacts
 
 ## Technology 
 
