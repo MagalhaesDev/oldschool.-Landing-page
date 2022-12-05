@@ -24,19 +24,19 @@ Here are the technologies used in this project
 
 ### 1 - This is the main page of the project <3 .
 
-![Homepage image](https://github.com/MagalhaesDev/oldschool.-Leading-page/blob/main/public/Readme/inicio-mobile.png)
+![Homepage image](https://github.com/MagalhaesDev/oldschool.-Landing-page/blob/main/public/Readme/inicio-mobile.png)
 
 ### 2 - Section on the treated subject, with text in Lorem ipsum.
 
-![About](https://github.com/MagalhaesDev/oldschool.-Leading-page/blob/main/public/Readme/sobre-mobile.png)
+![About](https://github.com/MagalhaesDev/oldschool.-Landing-page/blob/main/public/Readme/sobre-mobile.png)
 
 ### 3 - This section, related to services, is intended to present to the users the services provided by the academy.
 
-![Services](https://github.com/MagalhaesDev/oldschool.-Leading-page/blob/main/public/Readme/servico-mobile.png)
+![Services](https://github.com/MagalhaesDev/oldschool.-Landing-page/blob/main/public/Readme/servico-mobile.png)
 
 ### 4 - This section shows the testimonials from users using the swiper library.
 
-![Testimonials](https://github.com/MagalhaesDev/oldschool.-Leading-page/blob/main/public/Readme/depoimento-mobile.png)
+![Testimonials](https://github.com/MagalhaesDev/oldschool.-Landing-page/blob/main/public/Readme/depoimento-mobile.png)
 
 ### 4 - This section contains the representatives' contacts. Such as whatsapp, telephone, location and address.
 
