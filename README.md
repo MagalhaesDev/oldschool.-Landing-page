@@ -7,7 +7,7 @@ A landing page that has the intuition of presenting a static page with a good UX
 
 ## Technology 
 
-Here are the technologies used in this project.
+Here are the technologies used in this project
 
 * Javascript
 * CSS
